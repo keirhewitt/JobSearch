@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Playfair+Display:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap');
+
+:root {
+  --bg-1: #222831;
+  --bg-2: #393e46;
+  --bg-3: #BAB2B5; 
+  --bg-4: #0092ca;
+  --bg-5: #eeeeee;
+}
+
+body { 
+    margin: 0;
+    font-family: 'Merriweather', cursive;
+}
+
+.app-header {
+    padding: 60px;
+    font-family: 'Suez One', cursive;
+    text-align: center;
+    background: var(--bg-2);
+    color: var(--bg-5);
+    font-size: 30px;
+    text-decoration: underline;
+    text-decoration-color: var(--bg-4);
+    text-decoration-thickness: 15%;
+    text-underline-offset: 2px;
+    border-bottom: 2px dashed var(--bg-4);
+}
+
+.main-page {
+    height: 100%;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, auto);
+    grid-template-rows: repeat(auto-fill, auto);
+    gap: 20px; 
+    background-color: var(--bg-3);
+    padding: 20px;
+    
+}
+
+.main-page :nth-of-type(5n+1),
+.main-page :nth-of-type(5n+4) {
+    grid-column: span 2;
+}
+
+.main-page :nth-of-type(5n+5) {
+    grid-area: span 2/4;
+}
+
+.main-page :nth-of-type(5n+3) {
+    grid-column: 1;
+}
+
+.app-jobs {
+    /*border: 0.5px solid black;*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--bg-5);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 0px var(--bg-4);
+}
+
+p {
+    /*border: 0.5px solid black;*/
+    display: flex;
+    color: var(--bg-1);
+    justify-content: center;
+    font-size: large;
+}
+
+.job-title {
+    background-color: var(--bg-3);
+}
+
+.job-company {
+    font-size: larger;
+}
+
+.job-salary {
+    font-weight: bold;
+}
+
+.url-btn {
+    display: inline;
+    height: 30px;
+    width: 50%;
+    font-family: 'Patua One', cursive;
+    background-color: (var(--bg-1));
+    transition: all 0.1s ease-out;
+    border: none;
+    border-radius: 15px;
+    border-color: var(--bg-5);
+    background: linear-gradient(180deg, #ff7147, #e0417f);
+    transform: scale(1);
+    
+}
+
+.url-btn:hover {
+    background: linear-gradient(45deg, #0037ff, #00adff);
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+a {
+    text-decoration: none;
+    color: var(--bg-2);
+}
+
+#source-img {
+    max-height: 30%;
+    max-width: 30%;
+    border-radius: 6px;
+}

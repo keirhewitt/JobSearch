@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3ffe116f.css",
+    "main.js": "/static/js/main.bd8e9f59.js",
+    "static/media/s1jobs.png": "/static/media/s1jobs.def95266a55f2f9f3326.png",
+    "static/media/glassdoor.png": "/static/media/glassdoor.5db667e908ffa8b0e8e9.png",
+    "static/media/monster.png": "/static/media/monster.43336b358001c9a41c55.png",
+    "static/media/indeed.png": "/static/media/indeed.9070d4d331b8126d42fc.png",
+    "static/media/reed.png": "/static/media/reed.ba0785247d6f50a306ed.png",
+    "index.html": "/index.html",
+    "main.3ffe116f.css.map": "/static/css/main.3ffe116f.css.map",
+    "main.bd8e9f59.js.map": "/static/js/main.bd8e9f59.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ffe116f.css",
+    "static/js/main.bd8e9f59.js"
+  ]
+}
