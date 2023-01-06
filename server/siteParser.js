@@ -1,7 +1,6 @@
-import { fTitle } from './helper.js';
+const helper = require('./helper.js');
 
-
-export function GetJobObject(sitename, cheerio_obj) {
+function GetJobObject(sitename, cheerio_obj, html) {
 
     if (sitename == "indeed") {
         cheerio_obj('a:contains("Developer")', html).each(function () {   // Search each site for specific tags
@@ -43,7 +42,7 @@ export function GetJobObject(sitename, cheerio_obj) {
 
     if (sitename == "s1") {
         cheerio_obj('a[title*="Developer"]', html).each(function () {
-            const title = fTitle($(this).text())
+            const title = helper.fTitle($(this).text())
             const companyName = $(this).closest('.job__main').find(".job__posted-row").find(".job__company-link").text()
             const salary = $(this).closest('.job__main').find("dd").first().text().trim()
             const datePosted = $(this).closest('.job__main').find(".job__posted-by").find("span").text()
@@ -81,7 +80,7 @@ export function GetJobObject(sitename, cheerio_obj) {
 
     if (sitename == "reed") {
         cheerio_obj('.gtmJobTitleClickResponsive', html).each(function () {
-            const title = fTitle($(this).html())
+            const title = helper.fTitle($(this).html())
             const companyName = $(this).closest('.job-result-heading').find(".gtmJobListingPostedBy").text()
             const salary = $(this).closest('.job-result-heading').next("ul").find("li").first().text().toLowerCase()
             const datePosted = $(this).closest('.job-result-heading').find("div.job-result-heading__posted-by").text()
@@ -100,3 +99,5 @@ export function GetJobObject(sitename, cheerio_obj) {
         })
     }
 }
+
+module.exports = { GetJobObject };
