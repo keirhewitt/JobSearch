@@ -6,9 +6,17 @@ import './App.css'
 function App() {
   const [data, setData] = useState([])  // Init empty array for job data objects to be passed to
 
+  async function fetchAPIData(uri) {  
+    const data = await fetch(uri);
+    console.log('\n\n\n\n\n\n\n\n\n')
+    console.log(data);
+    console.log('\n\n\n\n\n\n\n\n\n')
+    return data;
+  }
+
   /** On page load */
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/jobs') // Fetch api/jobs through proxy
+    fetchAPIData('http://192.168.56.1:3000/jobs') // Fetch api/jobs through proxy
       .then((res) => res.json())        // Convert response to JSON
       .then((res) => {
         setData(res)                    // Store JSON response in data array
